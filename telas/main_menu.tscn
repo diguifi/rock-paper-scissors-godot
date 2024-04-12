@@ -1,0 +1,56 @@
+[gd_scene load_steps=3 format=3 uid="uid://cb3upp12pg0a8"]
+
+[ext_resource type="Script" path="res://telas/main_menu.gd" id="1_717kw"]
+[ext_resource type="Texture2D" uid="uid://8r7dtvxftgni" path="res://assets/dojo.jpg" id="1_oh8cv"]
+
+[node name="MainMenu" type="Node2D"]
+script = ExtResource("1_717kw")
+
+[node name="Dojo" type="Sprite2D" parent="."]
+modulate = Color(0.478431, 0.478431, 0.478431, 1)
+position = Vector2(574.444, 376.5)
+scale = Vector2(1.19906, 1.19906)
+texture = ExtResource("1_oh8cv")
+
+[node name="Label" type="Label" parent="."]
+offset_right = 1153.0
+offset_bottom = 178.0
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0.741176)
+theme_override_constants/shadow_offset_x = -10
+theme_override_constants/shadow_offset_y = 5
+theme_override_constants/outline_size = 0
+theme_override_constants/shadow_outline_size = 20
+theme_override_font_sizes/font_size = 80
+text = "Jokenpo Seminfo
+Online"
+horizontal_alignment = 1
+vertical_alignment = 1
+uppercase = true
+
+[node name="TextEdit" type="TextEdit" parent="."]
+offset_left = 453.0
+offset_top = 335.0
+offset_right = 700.0
+offset_bottom = 468.0
+theme_override_font_sizes/font_size = 82
+placeholder_text = "xxxx"
+
+[node name="Entrar" type="Button" parent="."]
+offset_left = 273.0
+offset_top = 538.0
+offset_right = 499.0
+offset_bottom = 604.0
+theme_override_font_sizes/font_size = 42
+text = "ENTRAR"
+
+[node name="Convidar" type="Button" parent="."]
+offset_left = 664.0
+offset_top = 538.0
+offset_right = 834.0
+offset_bottom = 604.0
+theme_override_font_sizes/font_size = 42
+text = "CONVIDAR"
+
+[connection signal="text_changed" from="TextEdit" to="." method="_on_text_edit_text_changed"]
+[connection signal="pressed" from="Entrar" to="." method="_on_entrar_pressed"]
+[connection signal="pressed" from="Convidar" to="." method="_on_convidar_pressed"]
