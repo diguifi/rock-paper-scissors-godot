@@ -2,6 +2,8 @@ extends Node
 
 var sua_jogada = -1
 var jogada_oponente = 1
+var pontos_player1 = 0
+var pontos_player2 = 0
 
 func _ready():
 	Signals.connect('new_round', _new_round)
@@ -17,6 +19,10 @@ func ambos_jogaram():
 
 func exibir_resultado(vencedor):
 	Signals.emit_signal('end_round',sua_jogada,jogada_oponente,vencedor)
+	if vencedor == 0:
+		pontos_player1 += 1
+	elif vencedor == 1:
+		pontos_player2 += 1
 	
 func _played(hand_1, hand_2, vencedor):
 	preencher_jogada_oponente(hand_1, hand_2)

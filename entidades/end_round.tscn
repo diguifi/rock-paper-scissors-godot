@@ -3,33 +3,6 @@
 [ext_resource type="Script" path="res://entidades/end_round.gd" id="1_m67ow"]
 [ext_resource type="Texture2D" uid="uid://kod10rqua5q0" path="res://assets/rock.png" id="2_5x8dl"]
 
-[sub_resource type="Animation" id="Animation_bhiu5"]
-resource_name = "jogada"
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("Player1:position")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 1),
-"transitions": PackedFloat32Array(5.85634, 1),
-"update": 0,
-"values": [Vector2(-162, 310), Vector2(300, 310)]
-}
-tracks/1/type = "value"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath("Player2:position")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"times": PackedFloat32Array(0, 1),
-"transitions": PackedFloat32Array(5.85, 1),
-"update": 0,
-"values": [Vector2(1312, 310), Vector2(887, 310)]
-}
-
 [sub_resource type="Animation" id="Animation_w274i"]
 length = 0.001
 tracks/0/type = "value"
@@ -55,6 +28,33 @@ tracks/1/keys = {
 "transitions": PackedFloat32Array(1),
 "update": 0,
 "values": [Vector2(1270, 310)]
+}
+
+[sub_resource type="Animation" id="Animation_bhiu5"]
+resource_name = "jogada"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Player1:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(5.85634, 1),
+"update": 0,
+"values": [Vector2(-162, 310), Vector2(300, 310)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Player2:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(5.85, 1),
+"update": 0,
+"values": [Vector2(1312, 310), Vector2(887, 310)]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_n3f54"]

@@ -1,0 +1,38 @@
+[gd_scene load_steps=2 format=3 uid="uid://c7rsjsvh376ns"]
+
+[ext_resource type="Script" path="res://managers/pontos.gd" id="1_jxerf"]
+
+[node name="Pontos" type="Node2D"]
+script = ExtResource("1_jxerf")
+
+[node name="PontosPlayer1" type="Label" parent="."]
+offset_left = 94.0
+offset_top = 56.0
+offset_right = 134.0
+offset_bottom = 79.0
+theme_override_font_sizes/font_size = 48
+text = "0"
+
+[node name="PontosPlayer2" type="Label" parent="."]
+offset_left = 1006.0
+offset_top = 56.0
+offset_right = 1046.0
+offset_bottom = 123.0
+theme_override_font_sizes/font_size = 48
+text = "0"
+
+[node name="Label" type="Label" parent="."]
+offset_left = 80.0
+offset_top = 15.0
+offset_right = 134.0
+offset_bottom = 49.0
+theme_override_font_sizes/font_size = 24
+text = "você"
+
+[node name="Label2" type="Label" parent="."]
+offset_left = 969.0
+offset_top = 15.0
+offset_right = 1081.0
+offset_bottom = 49.0
+theme_override_font_sizes/font_size = 24
+text = "oponente"

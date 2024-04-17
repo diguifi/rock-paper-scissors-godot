@@ -21,6 +21,10 @@ Globals="*res://globals.gd"
 Signals="*res://managers/signals.gd"
 Client="*res://managers/client.gd"
 
+[display]
+
+window/stretch/mode="viewport"
+
 [rendering]
 
 renderer/rendering_method="gl_compatibility"

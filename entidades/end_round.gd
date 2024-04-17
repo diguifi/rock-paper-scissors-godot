@@ -33,6 +33,8 @@ func calcula_sprite(jogada):
 func _on_animation_player_animation_finished(anim_name):
 	if round_winner == Client.player_id:
 		label.text = 'You Win!'
+	elif round_winner == 3:
+		label.text = 'Tie!'
 	else:
 		label.text = 'You Lose'
 

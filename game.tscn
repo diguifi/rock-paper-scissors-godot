@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=3 uid="uid://bqb4oh5solpqy"]
+[gd_scene load_steps=8 format=3 uid="uid://bqb4oh5solpqy"]
 
 [ext_resource type="Texture2D" uid="uid://8r7dtvxftgni" path="res://assets/dojo.jpg" id="1_81wcr"]
 [ext_resource type="PackedScene" uid="uid://cncs7esrc5ooy" path="res://entidades/jogada.tscn" id="1_vo5yj"]
@@ -6,6 +6,7 @@
 [ext_resource type="Texture2D" uid="uid://v3ce1tcvdklf" path="res://assets/paper.png" id="3_qbfmw"]
 [ext_resource type="Texture2D" uid="uid://dunt1qx3nwvdn" path="res://assets/scissors.png" id="4_2cx76"]
 [ext_resource type="PackedScene" uid="uid://c36npe6wbrx88" path="res://entidades/end_round.tscn" id="5_w2f7n"]
+[ext_resource type="PackedScene" uid="uid://c7rsjsvh376ns" path="res://managers/pontos.tscn" id="7_gwubj"]
 
 [node name="Game" type="Node2D"]
 
@@ -40,3 +41,5 @@ texture_normal = ExtResource("4_2cx76")
 tipo = 3
 
 [node name="EndRound" parent="." instance=ExtResource("5_w2f7n")]
+
+[node name="PontosPlayer1" parent="." instance=ExtResource("7_gwubj")]
