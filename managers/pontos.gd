@@ -11,5 +11,7 @@ func _ready():
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
+	pontos1.visible = !Globals.playing_animation
+	pontos2.visible = !Globals.playing_animation
 	pontos1.text = str(Globals.pontos_player1)
 	pontos2.text = str(Globals.pontos_player2)

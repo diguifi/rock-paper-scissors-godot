@@ -1,7 +1,8 @@
-[gd_scene load_steps=6 format=3 uid="uid://c36npe6wbrx88"]
+[gd_scene load_steps=7 format=3 uid="uid://c36npe6wbrx88"]
 
 [ext_resource type="Script" path="res://entidades/end_round.gd" id="1_m67ow"]
 [ext_resource type="Texture2D" uid="uid://kod10rqua5q0" path="res://assets/rock.png" id="2_5x8dl"]
+[ext_resource type="AudioStream" uid="uid://lkvmu5barq7" path="res://assets/sounds/jogada.ogg" id="3_g677h"]
 
 [sub_resource type="Animation" id="Animation_w274i"]
 length = 0.001
@@ -32,6 +33,7 @@ tracks/1/keys = {
 
 [sub_resource type="Animation" id="Animation_bhiu5"]
 resource_name = "jogada"
+length = 2.0
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
@@ -39,7 +41,7 @@ tracks/0/path = NodePath("Player1:position")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array(0, 1),
+"times": PackedFloat32Array(0, 2),
 "transitions": PackedFloat32Array(5.85634, 1),
 "update": 0,
 "values": [Vector2(-162, 310), Vector2(300, 310)]
@@ -51,7 +53,7 @@ tracks/1/path = NodePath("Player2:position")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
-"times": PackedFloat32Array(0, 1),
+"times": PackedFloat32Array(0, 2),
 "transitions": PackedFloat32Array(5.85, 1),
 "update": 0,
 "values": [Vector2(1312, 310), Vector2(887, 310)]
@@ -89,8 +91,11 @@ offset_bottom = 172.0
 theme_override_font_sizes/font_size = 80
 
 [node name="Timer" type="Timer" parent="."]
-wait_time = 2.0
+wait_time = 3.0
 one_shot = true
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("3_g677h")
 
 [connection signal="animation_finished" from="AnimationPlayer" to="." method="_on_animation_player_animation_finished"]
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

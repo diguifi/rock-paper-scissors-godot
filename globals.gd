@@ -4,6 +4,7 @@ var sua_jogada = -1
 var jogada_oponente = 1
 var pontos_player1 = 0
 var pontos_player2 = 0
+var playing_animation = false
 
 func _ready():
 	Signals.connect('new_round', _new_round)

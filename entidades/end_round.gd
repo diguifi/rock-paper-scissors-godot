@@ -5,6 +5,7 @@ extends Node2D
 @onready var animation = $AnimationPlayer
 @onready var label = $Label
 @onready var timer = $Timer
+@onready var audio = $AudioStreamPlayer
 var round_winner = -1
 
 const rock = preload("res://assets/rock.png")
@@ -15,9 +16,11 @@ func _ready():
 	Signals.connect('end_round', _end_round)
 
 func _end_round(jogada1, jogada2, winner):
+	Globals.playing_animation = true
 	player1_sprite.set_texture(calcula_sprite(jogada1))
 	player2_sprite.set_texture(calcula_sprite(jogada2))
 	round_winner = winner
+	audio.play()
 	animation.play('jogada')
 	timer.start()
 
@@ -39,6 +42,7 @@ func _on_animation_player_animation_finished(anim_name):
 		label.text = 'You Lose'
 
 func _on_timer_timeout():
+	Globals.playing_animation = false
 	reset()
 	Signals.emit_signal('new_round')
 	
