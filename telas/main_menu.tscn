@@ -13,8 +13,10 @@ scale = Vector2(1.19906, 1.19906)
 texture = ExtResource("1_oh8cv")
 
 [node name="Label" type="Label" parent="."]
-offset_right = 1153.0
-offset_bottom = 178.0
+offset_left = 1.0
+offset_top = 36.0
+offset_right = 1154.0
+offset_bottom = 259.0
 theme_override_colors/font_shadow_color = Color(0, 0, 0, 0.741176)
 theme_override_constants/shadow_offset_x = -10
 theme_override_constants/shadow_offset_y = 5
@@ -28,26 +30,26 @@ vertical_alignment = 1
 uppercase = true
 
 [node name="TextEdit" type="TextEdit" parent="."]
-offset_left = 453.0
-offset_top = 335.0
-offset_right = 700.0
-offset_bottom = 468.0
+offset_left = 449.0
+offset_top = 369.0
+offset_right = 696.0
+offset_bottom = 502.0
 theme_override_font_sizes/font_size = 82
 placeholder_text = "xxxx"
 
 [node name="Entrar" type="Button" parent="."]
-offset_left = 273.0
-offset_top = 538.0
-offset_right = 499.0
-offset_bottom = 604.0
+offset_left = 256.0
+offset_top = 570.0
+offset_right = 482.0
+offset_bottom = 636.0
 theme_override_font_sizes/font_size = 42
 text = "ENTRAR"
 
 [node name="Convidar" type="Button" parent="."]
-offset_left = 664.0
-offset_top = 538.0
-offset_right = 834.0
-offset_bottom = 604.0
+offset_left = 647.0
+offset_top = 570.0
+offset_right = 873.0
+offset_bottom = 636.0
 theme_override_font_sizes/font_size = 42
 text = "CONVIDAR"
 
